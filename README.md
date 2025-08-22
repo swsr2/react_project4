@@ -1,42 +1,41 @@
-📒 Phonebook — React + Redux 연습 프로젝트
-간단한 연락처(이름/전화번호) 관리 웹앱입니다.
-연락처 추가 · 검색 · 수정 · 삭제 흐름을 통해 React 상태 관리와 Redux Toolkit 패턴을 연습하는 것을 목표로 합니다.
+# 전화번호부 애플리케이션
+이 프로젝트는 React로 구축된 간단한 전화번호부 애플리케이션입니다. 사용자가 연락처를 추가, 조회, 검색 및 삭제할 수 있습니다.
 
 Demo: https://phonebook-claire.netlify.app/
-Repository: https://github.com/swsr2/react_project4
- 
-GitHub
-✨ 기능
- 연락처 추가: 이름/전화번호 입력 후 저장
- 목록 보기: 등록된 연락처 리스트 렌더링
- 검색/필터: 이름(또는 번호)로 실시간 필터
- 수정 & 삭제: 개별 항목 편집/삭제
 
-🧰 기술 스택
-React 18+
-Redux Toolkit + React-Redux
-ESLint / Prettier
+## 기능
 
+- 이름과 전화번호로 새 연락처를 추가합니다.
+- 모든 연락처 목록을 조회합니다.
+- 이름으로 연락처를 검색합니다.
+- 기존 연락처를 삭제합니다.
 
-🚀 시작하기
-패키지 매니저는 npm/yarn/pnpm 중 하나를 사용하세요.
-CRA(Create React App) 기준 스크립트 예시입니다. package.json을 확인해 본인의 스크립트에 맞춰 수정하세요.
+## 설치
 
-의존성 설치
-npm install
-# or
-yarn
+이 프로젝트를 로컬에서 실행하려면 다음 단계를 따르세요:
 
+1. 저장소 복제:
+   ```bash
+   git clone <repository_url>
+   cd project4_phonebook
+   ```
+2. 의존성 설치:
+   ```bash
+   npm install
+   ```
 
+## 사용법
 
+개발 모드에서 애플리케이션을 시작하려면:
 
-🧩 구현 포인트
-Redux Toolkit 패턴
-createSlice
-Controlled Components
-query 기반 메모이제이션(useMemo) 고려
+```bash
+npm start
+```
 
-🧪 테스트 (옵션)
-Slice reducer 단위 테스트
-주요 컴포넌트 렌더/상호작용 테스트
+애플리케이션은 `http://localhost:3000`에서 접근할 수 있습니다.
 
+## 사용된 기술
+
+- React.js
+- Redux (상태 관리용)
+- CSS (스타일링용)
