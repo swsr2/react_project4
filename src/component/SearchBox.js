@@ -9,16 +9,25 @@ const SearchBox = () => {
         dispatch({ type: "SEARCH", payload: { searchPerson } })
     }
     return (
-        <Form onSubmit={searchName}>
-            <Row>
-                <Col lg={10}>
-                    <Form.Control type="text" placeholder="이름 검색" onChange={(event) => setSearchPerson(event.target.value)} />
-                </Col>
-                <Col lg={2}>
-                    <Button type='submit'>Search</Button>
-                </Col>
-            </Row>
-        </Form>
+        <div className="mb-4">
+            <Form onSubmit={searchName}>
+                <Row>
+                    <Col xs={9}>
+                        <Form.Control 
+                            type="text" 
+                            placeholder="검색할 이름을 입력해주세요" 
+                            onChange={(event) => setSearchPerson(event.target.value)}
+                            value={searchPerson}
+                        />
+                    </Col>
+                    <Col xs={3}>
+                        <Button variant="primary" type="submit" className="w-100">
+                            검색
+                        </Button>
+                    </Col>
+                </Row>
+            </Form>
+        </div>
     )
 }
 

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import SearchBox from './SearchBox'
-import ContactItem from './ContactItem'
-import { useSelector } from 'react-redux'
+import React, { useEffect, useState } from 'react';
+import ContactItem from './ContactItem';
+import { useSelector } from 'react-redux';
+import { ListGroup } from 'react-bootstrap';
 
 const ContactList = () => {
-    const { contactList, searchPerson } = useSelector(state => state)
+    const { contactList, searchPerson } = useSelector(state => state);
     const [filteredList, setFilteredList] = useState([]);
 
     useEffect(() => {
@@ -14,17 +14,18 @@ const ContactList = () => {
         } else {
             setFilteredList(contactList);
         }
-    }, [searchPerson, contactList])
+    }, [searchPerson, contactList]);
 
     return (
         <div>
-            <SearchBox />
-            <div className='list'>
-                총 인원:{filteredList.length}
-                {filteredList.map((item, index) => <ContactItem item={item} key={index} />)}
-            </div>
+            <div className="mb-2">총 인원: {filteredList.length}명</div>
+            <ListGroup>
+                {filteredList.map((item, index) => (
+                    <ContactItem item={item} key={index} />
+                ))}
+            </ListGroup>
         </div>
-    )
-}
+    );
+};
 
-export default ContactList
+export default ContactList;
